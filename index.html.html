@@ -1,0 +1,1096 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>// H E L L O D A R K N E S S \\</title>
+
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<style>
+
+
+/* BASE
+--------------------------------------------------------- */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: url('http://i.imgur.com/eyIuDcL.png') repeat #FFE4DE;
+  font-family: "Lucida Sans Unicode", Lucida Grande, sans-serif;
+  color: #993399;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #993399;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+ol {
+  padding: 0;
+  padding-left: 1.25em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  margin-bottom: 2em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.clearer {
+  float: none !important;
+  clear: both;
+}
+
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track
+{
+  background:  #993399;
+  border-radius: 10px;
+   
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #F09F96;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 8px #EE867B; 
+}
+
+
+
+/* OVERALL CONTAINERS AND COLUMNS
+--------------------------------------------------------- */
+
+.container {
+  margin: 28px;
+}
+
+.container a,
+footer a {
+  background: url('http://i.imgur.com/MfkMKPp.png') repeat-x;
+  background-position: 0 100%;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+.container a:hover,
+footer a:hover {
+  background: #FDEE2F url('http://i.imgur.com/MfkMKPp.png') repeat-x;
+  background-position: 0 100%;
+}
+
+.columns {
+  margin-top: 2em;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.columns-1 .column {
+  width: 100%;
+}
+
+.columns-2 .column {
+  width: 50%;
+}
+
+.columns-3 .column {
+  width: 33.33%;
+}
+
+.columns-4 .column {
+  width: 25%;
+}
+
+.columns-5 .column {
+  width: 20%;
+}
+
+
+/* TYPOGRAPHY
+--------------------------------------------------------- */
+
+.regular,
+.caption, figcaption,
+.text .notes,
+.text blockquote,
+.document,
+#footnotes,
+.sign-off {
+  font-family: "Lucida Console", Monaco5, monospace;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.large,
+.text {
+  font-family: "Lucida Console", Monaco5, monospace;
+  font-size: 28px;
+  line-height: 32px;
+}
+
+code,
+nav,
+.library,
+.blog-row,
+.blog-date,
+.metadata,
+ul.calendar .title,
+footer .source,
+#meta-bar,
+.project-code,
+.projects-start-end,
+.sections-index {
+  font-family: Arial Black, Arial Black, Gadget, sans-serif
+  font-size: 17px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+a.button {
+  background: white;
+  border-bottom: 1px solid white;
+  /*padding: 16px 20px;*/
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+a.button:hover {
+  background: white;
+  border-bottom: 1px solid white;
+}
+
+.document ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+
+
+/* NAVIGATION
+--------------------------------------------------------- */
+
+nav {
+  text-align: center;
+  height: 5%;
+  width: 50%;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  text-transform: uppercase;
+  border-bottom: 3px double #F09F96;
+  position: fixed;
+  z-index: 1;
+  background: #FFE4DE;
+  
+}
+
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  list-style-position: outside;
+  margin-right: 12px;
+  padding: 22px 3px;
+  text-indent: 0;
+  background: url('http://icons.iconarchive.com/icons/etherbrian/bit-eat/16/Strawberry-icon.png') no-repeat;
+  background-size: 12px 12px;
+  background-position:center 24%;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+nav li:hover {
+  background: url('http://icons.iconarchive.com/icons/areskub/seize/16/Lovedsgn-icon.png') no-repeat;
+  background-size: 6px 6px;
+  background-position:center 24%;
+}
+
+nav li.current,
+nav li.current:hover {
+  background: url('http://icons.iconarchive.com/icons/areskub/seize/16/Lovedsgn-icon.png') no-repeat;
+  background-size: 6px 6px;
+  background-position:center 24%;
+  cursor: pointer;
+}
+
+nav .home-link {
+  position: fixed;
+  left: 16px;
+  top: 10px;
+  height: 25px;
+  width: 25px;
+  background: url('http://i.imgur.com/4bnaa1p.png') no-repeat;
+  background-size: 25px 25px;
+}
+
+nav .info-link {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  height: 12px;
+  width: 12px;
+  background: url('http://icons.iconarchive.com/icons/areskub/seize/16/Lovedsgn-icon.png') no-repeat;
+  background-size: 12px 12px;
+}
+
+/*nav#subnav {
+  text-align: left;
+  border: 0;
+  display: block;
+  position: absolute;
+  padding: 28px 16px;
+  height: auto;
+}
+
+nav#subnav.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav#subnav li {
+  display: block;
+  list-style-type: none;
+  margin-right: 0;
+  padding: 0;
+  text-indent: 16px;
+  background-position:left 50%;
+}
+
+nav#subnav li:hover {
+  background-position:left 50%;
+}
+
+nav#subnav li.current,
+nav#subnav li.current:hover {
+  background: url('http://icons.iconarchive.com/icons/areskub/seize/16/Lovedsgn-icon.png') no-repeat;
+}
+
+nav#subnav li.top {
+  display: none;
+  font-size: 20px;
+  margin-top: -4px;
+}
+
+nav#subnav li.top:hover {
+  background: none;
+}*/
+
+
+/* HOME
+--------------------------------------------------------- */
+
+#greeting {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+#town {
+  background: url('http://laughingsquid.com/wp-content/uploads/2015/02/tumblr_niwstmDnzJ1slt6qeo1_500.gif') no-repeat center center;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  display: float;
+	float: right;
+	position:fixed;
+	top: 0px;
+	right:0px;
+	z-index: 1;
+	display: flex;
+}
+
+
+#doubleback {
+  background: none;
+  width: 40%;
+  height: 100%;
+  z-index: -1;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  margin-right: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  top: 150px;
+  position: absolute;
+}
+
+
+.floating-box {
+
+	/* side menu */
+
+    display: float;
+	float: right;
+	position:fixed;
+	top: -20px;
+	right:10px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #F09F96;
+	background-color: rgb(246, 63, 150);
+	padding: 5px;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	 box-shadow: .05em 0em 1em #F09F96;
+	z-index: 2;
+}
+
+
+.floating-box2 {
+
+	/* side menu */
+
+    display: float;
+	float: right;
+	position:fixed;
+	top: 100px;
+	right:10px;
+    width: 100px;
+    height: 90px;
+    border: 1px solid #F09F96;
+	background-color: rgb(242, 109, 172);
+	padding: 5px;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	 box-shadow: .05em 0em 1em #F09F96;
+	z-index: 2;
+}
+
+.floating-box3 {
+
+	/* side menu */
+
+    display: float;
+	float: right;
+	position:fixed;
+	top: 210px;
+	right:10px;
+    width: 100px;
+    height: 90px;
+    border: 1px solid #F09F96;
+	background-color: rgb(240, 159, 197);
+	padding: 5px;
+	border-radius: 3px;
+	text-align: center;
+	color: white;
+	 box-shadow: .05em 0em 1em #F09F96;
+	z-index: 2;
+}
+
+div.roundfloater {
+ 
+	/* orange round text box */
+	
+    position: fixed;
+    top: 324px;
+	right: 10px;
+    width: 35%;
+    height: 35%;
+    border: 0px solid #F09F96;
+	background-color: #FFE4DE;
+	padding: 20px;
+	border-radius: 3px;
+	
+	overflow: hidden;
+	 -webkit-border-radius: 3px;
+	 box-shadow:inset 0 0 2em #F09F96;
+z-index: 2;
+}
+
+
+div.floatertext {
+
+margin:auto;
+overflow-y: auto;
+position: relative;
+ width: 90%;
+ height: 90%;
+z-index: 2;
+
+}
+
+
+/* TEXTS DIRECTORY
+--------------------------------------------------------- */
+
+.library-row,
+.blog-row {
+  width: 100%;
+  border-top: 1px solid #000;
+  padding: 16px 0 16px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+    
+a.library-item,
+a.blog-post {
+  color: #993399;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  text-indent: 16px;
+  padding: 16px 0 16px;
+  margin: -16px 0 -16px;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+.library-row .class-item h2 {
+  text-transform: uppercase;
+}
+    
+a.library-item:hover,
+a.top-link:hover,
+a.blog-post:hover {
+  background: #FDEE2F;
+  cursor: pointer;/*
+  -webkit-animation: pulse 1.2s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;*/
+}
+
+.library-item h2,
+.blog-post h2 {
+  display: inline;
+}
+
+.library-item .year,
+.blog-post .date {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.library-row:first-child,
+.blog-row:first-child {
+  border-top: 0;
+}
+
+.library-row:last-child,
+.blog-row:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.metadata p {
+  margin: 0;
+}
+
+.metadata .space {
+  width: 100%;
+  height: 1em;
+}
+
+.metadata {
+  margin-bottom: 56px;
+}
+
+sup.footnote {
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+#footnotes {
+  margin-top: 56px;
+  max-width: 640px;
+}
+
+#footnotes li {
+  margin-bottom: 1em;
+}
+
+.footnotereverse a,
+.footnotereverse a:hover {
+  background: none;
+}
+
+/* INDIVIDUAL TEXT
+--------------------------------------------------------- */
+
+a.top-link {
+  display: block;
+  position: relative;
+  height: 52px;
+  border-bottom: 1px solid black;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+figure {
+  margin-bottom: 1em;
+}
+
+figure.right {
+  float: right;
+  margin-left: 1em;
+}
+
+figure.left {
+  float: left;
+  margin-right: 1em;
+}
+
+figure.small {
+  max-width: 250px;
+}
+
+figure.medium {
+  max-width: 400px;
+}
+
+figure.large {
+  max-width: 700px;
+}
+
+.blog-post h1 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+  font-weight: bold;
+}
+
+.text .notes,
+.text blockquote {
+  max-width: 640px;
+}
+
+.metadata h1 {
+  margin: 0;
+}
+
+.metadata .selected-image {
+  max-width: 175px;
+  margin-bottom: 1em;
+}
+
+
+/* INDIVIDUAL DOCUMENT
+--------------------------------------------------------- */
+
+.document {
+  max-width: 640px;
+  margin: 2em auto;
+}
+
+.document h2,
+.document h3,
+.document h4,
+.document h5,
+.document h6 {
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.document ul li {
+  list-style-type: circle;
+  list-style: inside;
+}
+
+.document .metadata {
+  margin-top: 56px;
+}
+
+#meta-bar {
+  display: none;
+}
+
+#meta-bar .inside {
+  padding: 17px 0;
+  width: 100%;
+  text-align: center;
+  background: #BEC6C9;
+}
+
+#meta-bar hr {
+  margin: 112px 0 0;
+}
+
+#meta-bar.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#meta-bar .back-to-top {
+  display: none;
+  padding: 17px;
+  position: absolute;
+}
+
+.document h2:first-child {
+  margin-top: 0;
+}
+
+.document hr {
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 84px 0;
+}
+
+
+/* PROJECTS
+--------------------------------------------------------- */
+
+/*.document ul.projects {
+  margin: 2em 0;
+}*/
+
+.document ul.projects li {
+  list-style-type: none;
+}
+
+.document-side {
+  position: absolute;
+}
+
+
+/* CALENDAR
+--------------------------------------------------------- */
+
+ul.calendar {
+  border-top: 1px solid #000;
+  margin-top: 52px;
+}
+
+ul.calendar li.calendar-row {
+  border-bottom: 1px solid #000;
+}
+
+.document ul.calendar li.calendar-row {
+  list-style-type: none;
+}
+
+ul.calendar .title {
+  text-indent: 12px;
+  height: 52px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: .1s background ease-out;
+  -webkit-transition: .1s background ease-out;
+  -moz-transition: .1s background ease-out;
+  -o-transition: .1s background ease-out;
+}
+
+ul.calendar .title:hover {
+  background: #FDEE2F;
+}
+
+ul.calendar .body {
+  border-top: 1px dashed #000;
+  display: none;
+  margin-bottom: 52px;
+  padding-top: 19px;
+}
+
+.projects-start-end {
+  position: absolute;
+  width: 100px;
+  right: -100px;
+  top: 16px;
+}
+
+.current-week {
+  position: absolute;
+  width: 80px;
+  height: 54px;
+  left: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+figure.reading {
+  margin-bottom: -0.75em;
+}
+
+.reading img {
+  max-width: 175px;
+}
+
+ul.calendar figure {
+  margin: 1em 0;
+}
+
+
+/* FREEFORM
+--------------------------------------------------------- */
+
+footer {
+  margin: 28px;
+}
+
+footer .source {
+  display: none;
+  margin-top: 56px;
+}
+
+
+/* WORKSHOP and SPECIAL HOMEPAGE THINGS
+--------------------------------------------------------- */
+
+#naming-workshop {
+   width: 60px;
+   height: 82px;
+   position: fixed;
+   left: 33%;
+   bottom: 8%;
+   z-index: 7;
+   border: 1px solid #000;
+   -webkit-border-radius: 63px 63px 63px 63px / 108px 108px 72px 72px;
+   border-radius:         50%  50%  50%  50%  / 60%   60%   40%  40%;
+   background: #BEC6C9;
+   transition: .5s background ease-out;
+  -webkit-transition: .5s background ease-out;
+  -moz-transition: .5s background ease-out;
+  -o-transition: .5s background ease-out;
+}
+
+#naming-workshop:hover {
+  background: #fff;
+}
+
+#coding-from-life {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 80px;
+  right: 25px;
+  z-index: 7;
+  border: 1px solid #000;
+  background: #BEC6C9;
+  transition: .5s background ease-out;
+  -webkit-transition: .5s background ease-out;
+  -moz-transition: .5s background ease-out;
+  -o-transition: .5s background ease-out;
+}
+
+#coding-from-life:before {
+  border-left: 1px solid black;
+  height: 80px;
+  left: 50%;
+  position:absolute;
+  content:'';
+}
+
+#coding-from-life:after {
+  border-top: 1px solid black;
+  width: 80px;
+  top: 50%;
+  position:absolute;
+  content:'';
+}
+
+#coding-from-life:hover {
+  background: #fff;
+}
+
+/* SHUFFLE
+--------------------------------------------------------- */
+
+a.shuffle,
+a.shuffle:hover {
+  background: none;
+}
+
+
+/* SECTIONS
+--------------------------------------------------------- */
+
+.sections-index {
+  position: fixed;
+  background: yellow;
+  top: 88px;
+  left: 20px;
+}
+
+.sections-index a,
+.sections-index a:hover {
+  display: block;
+  background: none;
+}
+
+.section {
+  margin-top: 4em;
+}
+
+.paper {
+  background: white;
+  padding: 60px;
+  margin: 1em -60px;
+}
+
+header.paper-header {
+  font-size: 1em;
+  margin-top: -85px;
+  margin-bottom: 85px;
+  font-style: italic;
+}
+
+
+/* BLOG
+--------------------------------------------------------- */
+
+.blog-date {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: url('http://i.imgur.com/MfkMKPp.png') no-repeat;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 28px;
+  margin-bottom: 28px;
+}
+
+.blog-post.text h1 {
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES
+--------------------------------------------------------- */
+
+@media screen and (max-width: 880px) {
+
+  .projects-start-end { display: none; }
+
+}
+
+@media screen and (max-width: 810px) {
+
+  .document-side { display: none; }
+
+}
+
+@media screen and (max-width: 540px) {
+
+  nav {
+    display: block;
+    height: auto;
+    padding: 12px 0;
+  }
+
+  nav li {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+    background-position: 96% !important;
+  }
+
+  nav li:hover {
+    background-position: 96% !important;
+  }
+
+  nav li.current {
+    background: url('http://i.imgur.com/MfkMKPp.png') no-repeat;
+    background-size: 6px 6px;
+    background-position: 96% !important;
+    cursor: pointer;
+    margin-top: 2px;
+  }
+
+  nav .info-link,
+  nav .home-link {
+    position: static;
+    display: block;
+    margin: 8px auto;
+  }
+
+  .library-row .year {
+    display: none;
+  }
+
+  .large,
+  .text {
+    font-size: 19px;
+    line-height: 1.2;
+	color: #ffffff;
+  }
+
+  #meta-bar .back-to-top {
+    text-align: center;
+    width: 100%;
+    padding: 17px 0;
+  }
+
+  #meta-bar .inside {
+    display: none;
+  }
+
+}
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<div class="floating-box"><br /><p>who are you</p></div>
+
+<div class="floating-box2"><p>who are you</p></div>
+
+<div class="floating-box3"><p>who are you</p></div>
+
+
+
+
+<nav id="top" style="z-index: 2;">
+
+  <ul>
+    <a class="home-link" href="file:///W:/CourseDev/COURSE%20DEVELOPMENT/Working%20Projects/Liz/Experiments/website.html"></a>
+        <li >
+            	<a href="http://i.imgur.com/Kb2PtYK.gif">portfolio</a>
+          </li>
+        <li >
+            	<a href="http://i.imgur.com/Kb2PtYK.gif">journal</a>
+          </li>
+        <li >
+            	<a href="http://i.imgur.com/Kb2PtYK.gif">magic</a>
+          </li>
+        <li >
+            	<a href="http://i.imgur.com/Kb2PtYK.gif">photo</a>
+          </li>
+        <li >
+            	<a href="http://i.imgur.com/Kb2PtYK.gif">social</a>
+          </li>
+        <li >
+            	<a href="http://i.imgur.com/Kb2PtYK.gif">contact</a>
+          </li>
+        <!-- <a class="info-link" href="info"></a> -->
+  </ul>
+
+</nav>
+<!-- <div id="bouncer-container">
+  <div id="bouncer">
+    <a href="http://summer2016.veryinteractive.net">
+    	<div style="height: 160px; width: 160px; display: inline-block; background: #FDEE2F; border-radius: 50%;" class="sun"></div>
+    </a>
+  </div>
+</div> -->
+
+
+<div id="town">
+
+<p><img src="http://icons.iconarchive.com/icons/snaky-reports/breakfast/32/Orange-Juice-icon.png" style="display: float; float: right; position:fixed; top: 700px; right:50px; z-index: 2; " /></p>
+
+</div>
+
+<div id="doubleback">
+
+
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie tincidunt ipsum, sit amet tristique augue volutpat volutpat. Pellentesque blandit eleifend lectus a varius. Ut nulla nulla, commodo eu libero at, tincidunt eleifend dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sed vulputate est. Ut interdum placerat nunc, a aliquet erat blandit finibus. Praesent euismod ultricies lacus, a rhoncus quam consectetur vitae. Vestibulum vestibulum lacinia ex, et lacinia est suscipit nec. Proin fringilla, turpis quis aliquet aliquam, mauris dui bibendum leo, eu interdum ipsum sapien sit amet est.
+
+Curabitur pellentesque diam dolor. Nam volutpat enim non nunc mattis, id bibendum ipsum malesuada. Phasellus aliquam dui id tristique dignissim. Pellentesque viverra interdum condimentum. Proin felis nunc, porta eget pellentesque nec, tristique in dolor. Nulla eleifend dui eget est hendrerit faucibus. Quisque eget felis ut magna commodo gravida. Nulla non urna vitae justo venenatis sollicitudin.
+
+Proin accumsan lectus dapibus varius maximus. Aenean luctus eu ante ac convallis. Morbi quam purus, rutrum non sollicitudin non, commodo non nulla. Maecenas nisl orci, pretium porttitor dignissim eget, eleifend id lorem. Praesent vel turpis vitae metus fringilla ornare. Praesent aliquam nulla rhoncus nulla tempor pulvinar. Nunc congue cursus velit vitae iaculis. Vestibulum nec lacus nec lorem egestas convallis. Suspendisse potenti. Curabitur sit amet lacus in mauris viverra faucibus. Suspendisse sit amet porttitor nulla, nec malesuada felis. Suspendisse tempor erat nibh. Sed varius tortor sed laoreet fringilla.
+
+Praesent laoreet dui vel urna commodo mollis. Nam venenatis elementum tortor, vel placerat enim maximus scelerisque. Mauris facilisis vel tellus nec pulvinar. Integer lacus sem, feugiat eu rhoncus ac, rutrum venenatis ex. Morbi aliquet eros justo. Nunc a accumsan ligula. In hac habitasse platea dictumst. Mauris vel orci ornare, commodo eros dignissim, cursus augue. Maecenas iaculis ex nisl, in commodo tortor faucibus ultricies. Vestibulum consectetur sapien nec eros convallis, vitae scelerisque orci pulvinar. Aenean vitae nunc semper, sollicitudin tellus et, finibus enim. Nunc nec posuere enim. Cras finibus congue laoreet.
+
+Proin nec diam eu risus ullamcorper aliquam bibendum sodales massa. Nunc ex orci, tristique ac consectetur id, sollicitudin vel orci. Suspendisse sit amet neque vitae libero luctus accumsan eu at odio. Nullam ac mattis lorem, ac varius ante. Maecenas at elit lacus. Mauris sed lacus ut dolor hendrerit faucibus. Donec eget convallis lacus, dignissim ornare ipsum.</p>
+
+
+
+
+</div>
+
+
+<div class="roundfloater"><div class="floatertext">The meaning of life, or the answer to the question "What is the meaning of life?", pertains to the significance of living or existence in general. Many other questions also seek the meaning of life, including "What should I do?", "Why are we here?", "What is life all about?", and "What is the purpose of existence?" or even "Does life exist at all?" There have been a large number of proposed answers to these questions from many different cultural and ideological backgrounds. The search for life's meaning has produced much philosophical, scientific, theological, and metaphysical speculation throughout history. <p style="font-size: 80%;"><a href="https://en.wikipedia.org/wiki/Meaning_of_life"><i>wikipedia</i></a></p></div></div>
+
+
+
+
+
+<div id="greeting" class="large">
+	
+    
+    <p><a href ="http://www.iconka.com/"><u>=</u></a></p>
+    
+    
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="https://dl.dropboxusercontent.com/u/9299006/Script/global.js"></script><script src="http://veryinteractive.net/assets/js/bouncer.js"></script><script src="http://veryinteractive.net/assets/js/script.js"></script>
+
+
+</body>
+</html>
